@@ -1,7 +1,7 @@
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/notifications-page-challenge-28mkNpwM_7](https://www.frontendmentor.io/solutions/notifications-page-challenge-28mkNpwM_7)
+- Live Site URL: [https://user9511.github.io/frontend-mentor-notifications-page-main/](https://user9511.github.io/frontend-mentor-notifications-page-main/)
 
 # Frontend Mentor - Notifications page solution
 
