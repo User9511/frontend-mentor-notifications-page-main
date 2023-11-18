@@ -118,7 +118,7 @@ img {
 }
 
 /* Hover states for various elements */
-span:hover {
+.notification:hover {
   cursor: pointer;
 }
 
