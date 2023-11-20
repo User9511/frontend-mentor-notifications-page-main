@@ -46,12 +46,4 @@ notificationContainer.forEach((notification, index) => {
   };
 
   notification.addEventListener("click", handleClick);
-
-  // Add keydown event listener to handle space and enter keys
-  notification.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      // Trigger the click event for space and enter keys
-      notification.click();
-    }
-  });
 });

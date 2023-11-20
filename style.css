@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 :root {
@@ -36,7 +37,7 @@ main {
   background-color: var(--White);
 }
 
-nav {
+header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -64,7 +65,6 @@ h3 {
 
 #mark-read {
   font-size: 1rem;
-  padding: 0.5rem;
   color: var(--Dark-grayish-blue);
   background: transparent;
   border: 0;
@@ -87,10 +87,26 @@ h3 {
   padding: 0.5rem;
   border-radius: 0.5rem;
   color: var(--Grayish-blue);
+  position: relative;
+}
+
+.notification a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .notification:last-child {
   margin: 0;
+}
+
+button {
+  border: 0;
+  background: none;
+  font-size: 1rem;
 }
 
 /* Styling for user avatars */
@@ -100,12 +116,14 @@ img {
 }
 
 .user-name {
+  display: inline;
   color: var(--Very-dark-blue);
   font-weight: 800;
   margin-right: 0.3rem;
 }
 
 .notification-bold {
+  display: inline;
   font-weight: 800;
   color: var(--Dark-grayish-blue);
   margin-left: 0.2rem;
@@ -118,24 +136,48 @@ img {
 }
 
 /* Hover states for various elements */
-.notification:hover {
-  cursor: pointer;
-}
 
 .notification-blue:hover,
 .notification-bold:hover {
   color: var(--Blue);
 }
 
-span:focus-visible,
+/* span:focus-visible,
 .notification:focus-visible,
-#mark-read:focus-visible {
+#mark-read:focus-visible,
+a:focus-visible {
+  padding: 0.1rem;
   outline: 2px solid var(--Blue);
   border-radius: 0.5rem;
+} */
+
+a:focus-visible {
+  outline: none;
+}
+
+#mark-read:focus-within {
+  outline: 3px solid black;
+  border-radius: 0.5rem;
+  padding: 0.1rem;
+}
+
+.notification:focus-within {
+  outline: 3px solid black;
 }
 
 .read {
   margin-bottom: 1rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 .unread {
@@ -159,8 +201,16 @@ span:focus-visible,
   margin-top: 0.1rem;
 }
 
+a {
+  color: var(--Grayish-blue);
+}
+
 #Rizky {
   margin-top: 0.5rem;
+}
+
+.notification > div > p:nth-child(2) {
+  display: inline;
 }
 
 #Rizky-img {
@@ -173,7 +223,6 @@ span:focus-visible,
   border-radius: 0.5rem;
   margin-top: 1rem;
   color: var(--Grayish-blue);
-  cursor: pointer;
 }
 
 .private-message:hover {

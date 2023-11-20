@@ -10,76 +10,84 @@
   </head>
   <body>
     <main>
-      <nav>
-        <h3>Notifications <span id="notification-number"></span></h3>
+      <header>
+        <h1>Notifications <span id="notification-number"></span></h1>
+        <a href="#" role="button" id="mark-read"> Mark all as read</a>
+      </header>
 
-        <button id="mark-read" tabindex="0">Mark all as read</button>
-      </nav>
-      <section class="notifications-container">
-        <div class="notification unread" tabindex="0" role="button">
+      <ul class="notifications-container">
+        <li class="notification unread">
           <img src="./assets/images/avatar-mark-webber.webp" alt="mark Webber" />
           <div class="notification-text">
-            <span class="user-name">Mark Webber</span> reacted to your recent post
-            <span class="notification-bold"> My first tournament today! </span>
-            <span class="unread-icon"></span>
-            <span class="notification-time-stamp">1m ago</span>
-          </div>
-        </div>
+            <p class="user-name">Mark Webber</p>
+            reacted to your recent post
 
-        <div class="notification unread" tabindex="0" role="button">
+            <a href="#sregergreg" role="button" class="notification-bold">My first tournament today!</a>
+            <span class="unread-icon"></span>
+            <span class="sr-only">Unread notification</span>
+            <p class="notification-time-stamp">1m ago</p>
+          </div>
+        </li>
+
+        <li class="notification unread">
           <img src="./assets/images/avatar-angela-gray.webp" alt="Angela Gray" />
           <div class="notification-text">
-            <span class="user-name">Angela Gray</span> followed you
-
+            <a href="#" role="button" class="user-name"> Angela Gray</a>
+            followed you
             <span class="unread-icon"></span>
-            <span class="notification-time-stamp">5m ago</span>
+            <span class="sr-only">Unread notification</span>
+            <p class="notification-time-stamp">5m ago</p>
           </div>
-        </div>
+        </li>
 
-        <div class="notification unread" tabindex="0" role="button">
+        <li class="notification unread">
           <img src="./assets/images/avatar-jacob-thompson.webp" alt="Jacob Thompson" />
           <div class="notification-text">
-            <span class="user-name">Jacob Thompson</span> has joined your group <span class="notification-blue"> Chess Club </span>
-
+            <p class="user-name">Jacob Thompson</p>
+            has joined your group <a href="#" role="button" class="notification-blue"> Chess Club </a>
             <span class="unread-icon"></span>
-            <span class="notification-time-stamp">1 day ago</span>
+            <span class="sr-only">Unread notification</span>
+            <p class="notification-time-stamp">1 day ago</p>
           </div>
-        </div>
+        </li>
 
-        <div class="notification read" id="Rizky" tabindex="0" role="button">
+        <li class="notification read" id="Rizky">
           <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="Rizky Hasanuddin" id="Rizky-img" />
           <div class="notification-text">
-            <span class="user-name">Rizky Hasanuddin</span> sent you a private message
+            <p class="user-name">Rizky Hasanuddin</p>
+            <p>sent you a <a href="#" role="button"> private message</a></p>
             <span class="notification-time-stamp">5 days ago</span>
-            <div class="private-message">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</div>
+            <p class="private-message">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p>
           </div>
-        </div>
+        </li>
 
-        <div class="notification read" tabindex="0" role="button">
+        <li class="notification read">
           <img src="./assets/images/avatar-kimberly-smith.webp" alt="Kimberly Smith" />
           <div class="notification-text">
-            <span class="user-name">Kimberly Smith</span> commented on your picture
-            <span class="notification-time-stamp">1 week ago</span>
+            <span class="user-name">Kimberly Smith </span> commented on <a href="#" role="button"> your picture</a>
+            <p class="notification-time-stamp">1 week ago</p>
           </div>
           <img src="./assets/images/image-chess.webp" alt="girl playing chess" id="img-girl-chess" />
-        </div>
+        </li>
 
-        <div class="notification read" tabindex="0" role="button">
+        <li class="notification read">
           <img src="./assets/images/avatar-nathan-peterson.webp" alt="Nathan Peterson" />
           <div class="notification-text">
-            <span class="user-name">Nathan Peterson</span> reacted to your post <span class="notification-bold"> 5 end-game strategies to increase your win rate </span>
-            <span class="notification-time-stamp">2 weeks ago</span>
+            <p class="user-name">Nathan Peterson</p>
+            <p>reacted to your post <a href="#" role="button" class="notification-bold"> 5 end-game strategies to increase your win rate </a></p>
+            <p class="notification-time-stamp">2 weeks ago</p>
           </div>
-        </div>
+        </li>
 
-        <div class="notification read" tabindex="0" role="button">
+        <li class="notification read">
           <img src="./assets/images/avatar-anna-kim.webp" alt="Anna Kim" />
           <div class="notification-text">
-            <span class="user-name">Anna Kim</span> left the group <span class="notification-blue"> Chess Club </span>
-            <span class="notification-time-stamp">2 weeks ago</span>
+            <p class="user-name">Anna Kim</p>
+            left the group <a href="#" role="button" class="notification-blue"> Chess Club </a>
+            <p class="notification-time-stamp">2 weeks ago</p>
           </div>
-        </div>
-      </section>
+        </li>
+      </ul>
     </main>
 
     <script src="./app.js"></script>
